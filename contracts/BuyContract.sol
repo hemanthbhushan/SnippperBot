@@ -19,6 +19,11 @@ contract BuyContract is Ownable {
 
     address private maintanierAddress;
 
+    // constructor(address _platformAddress, address _maintanierAddress) {
+    //     platformAddress = _platformAddress;
+    //     maintanierAddress = _maintanierAddress;
+    // }
+
     /**
      * Perform a token swap from one token to another
      * @param _tokenIn The address of the token to trade out of
@@ -27,7 +32,7 @@ contract BuyContract is Ownable {
      * @param _amountOutMin The minimum amount of tokens expected to receive
      * @param _to The address to send the output tokens to
      */
-    function swapAndCut(
+    function swapWithFee(
         address _tokenIn,
         address _tokenOut,
         uint256 _amountIn,
