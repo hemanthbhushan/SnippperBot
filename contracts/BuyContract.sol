@@ -40,7 +40,7 @@ contract BuyContract is Ownable {
         address _to
     ) external {
         // Calculate the percentage to deduct
-        uint256 deductionAmount = (_amountIn * 99) / 100; // 0.99% deduction
+        uint256 deductionAmount = (_amountIn * 99) / 10000; // 0.99% deduction
         uint256 maintanierFee = deductionAmount / 2;
         uint256 platformFee = deductionAmount - maintanierFee;
 
